@@ -14,21 +14,12 @@ target.truncate(0)
 
 puts "Now I'm going to ask you for three lines."
 
-print "line 1: "
-line1 = $stdin.gets.chomp
-print "line 2: "
-line2 = $stdin.gets.chomp
-print "line 3: "
-line3 = $stdin.gets.chomp
+(0..2).each do |line| 
+  print "line #{line + 1}: "
+  target.write($stdin.gets)
+end 
 
-puts "I'm going to write these to the file."
-
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+puts "I wrote these to the file."
 
 puts "And finally, we close it."
 target.close

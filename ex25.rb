@@ -16,7 +16,7 @@ module Ex25
   # Prints the first word after shifting it off.
   def Ex25.print_first_word(words)
     word = words.shift
-    puts words
+    puts word
   end
 
   # Prints the last word after popping it off.
